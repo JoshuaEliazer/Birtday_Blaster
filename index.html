@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎂 Birthday Manager</h1>
+        
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Name">
+            <input type="tel" id="phone" placeholder="Phone (e.g. 919876543210)">
+            <input type="date" id="dob">
+            <button onclick="saveContact()">Add to List +</button>
+        </div>
+
+        <hr>
+
+        <h3>Your Contacts</h3>
+        <div id="contactList">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

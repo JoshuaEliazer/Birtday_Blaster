@@ -1,30 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Manager Pro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Birthday Blaster</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <main class="container">
+    <h1>Birthday Blaster</h1>
 
-    <div class="container">
-        <h1>🎂 Birthday Manager</h1>
-        
-        <div class="input-group">
-            <input type="text" id="name" placeholder="Name">
-            <input type="tel" id="phone" placeholder="Phone (e.g. 919876543210)">
-            <input type="date" id="dob">
-            <button onclick="saveContact()">Add to List +</button>
-        </div>
+    <form id="contactForm" onsubmit="event.preventDefault(); saveContact();">
+      <label>
+        Name
+        <input id="name" type="text" placeholder="Full name" required />
+      </label>
 
-        <hr>
+      <label>
+        Phone (international format recommended)
+        <input id="phone" type="tel" placeholder="+1234567890" required />
+      </label>
 
-        <h3>Your Contacts</h3>
-        <div id="contactList">
-            </div>
-    </div>
+      <label>
+        Date of Birth
+        <input id="dob" type="date" required />
+      </label>
 
-    <script src="script.js"></script>
+      <div class="form-actions">
+        <button type="submit">Save Contact</button>
+        <button type="button" id="clearAll">Clear All</button>
+      </div>
+    </form>
+
+    <section>
+      <h2>Contacts</h2>
+      <div id="contactList" class="contact-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

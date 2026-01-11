@@ -42,7 +42,7 @@ function sanitizePhoneForWa(phone) {
 }
 
 function escapeHtml(unsafe) {
-  if (unsafe == null) return '';
+  if (unsafe === null || unsafe === undefined) return '';
   return String(unsafe)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -63,7 +63,7 @@ function saveContact() {
   const dob = dobEl.value; // HTML date input value is YYYY-MM-DD
 
   if (!name || !phone || !dob) {
-    alert("Please fill all fields");
+    alert('Please fill all fields');
     return;
   }
 
